@@ -8,9 +8,9 @@ import {
   useLocation,
 } from '@tanstack/react-router'
 
-import SaludosOscar from './Components/SaludosOscar'
-import Quiz from './Components/Quiz'
-import BuscarPokemon from './Components/BuscarPokemon'
+import SaludosOscar from './components/SaludosOscar'
+import Quiz from './components/Quiz'
+import BuscarPokemon from './components/BuscarPokemon'
 
 /* =========================
    🎮 ROOT LAYOUT
