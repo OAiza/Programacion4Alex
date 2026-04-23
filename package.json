@@ -1,0 +1,7 @@
+{
+  "name": "programacion4alex",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd quiz-app && npm run dev"
+  }
+}

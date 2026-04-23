@@ -1,0 +1,233 @@
+/* 🎮 GLOBAL */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Orbitron', system-ui, sans-serif;
+
+  background: radial-gradient(circle at center, #0f172a, #020617);
+  color: #e2e8f0;
+}
+
+/* GRID FUTURISTA */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* GLOW AMBIENTAL */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,255,255,0.15), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(139,92,246,0.15), transparent 40%);
+
+  pointer-events: none;
+}
+
+/* 🎯 CENTER (estructura del profe) */
+#center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+  padding: 3rem 1rem;
+}
+
+/* 🎮 HERO */
+.hero {
+  position: relative;
+}
+
+.hero .base {
+  width: 170px;
+  opacity: 0.2;
+  filter: drop-shadow(0 0 20px #22d3ee);
+}
+
+.hero .framework {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg);
+
+  height: 30px;
+
+  filter:
+    drop-shadow(0 0 10px #22d3ee)
+    drop-shadow(0 0 20px #22d3ee);
+}
+
+.hero .vite {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+
+  height: 28px;
+
+  filter:
+    drop-shadow(0 0 10px #8b5cf6)
+    drop-shadow(0 0 20px #8b5cf6);
+}
+
+/* 🧠 TITULOS */
+.app-title {
+  font-size: 2.5rem;
+  text-align: center;
+
+  color: #22d3ee;
+
+  text-shadow:
+    0 0 10px #22d3ee,
+    0 0 25px #22d3ee;
+}
+
+.app-subtitle {
+  text-align: center;
+  color: #a78bfa;
+
+  text-shadow: 0 0 8px #a78bfa;
+}
+
+/* 🔋 CONTADOR */
+.counter {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  color: #020617;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px #06b6d4,
+    0 0 30px #8b5cf6;
+
+  transition: 0.25s;
+}
+
+.counter:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 25px #06b6d4,
+    0 0 50px #8b5cf6;
+}
+
+.counter:active {
+  transform: scale(0.95);
+}
+
+/* ✨ DIVISOR */
+.ticks {
+  width: 60%;
+  height: 2px;
+  margin: 2rem auto;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #22d3ee,
+    #8b5cf6,
+    transparent
+  );
+
+  box-shadow:
+    0 0 10px #22d3ee,
+    0 0 20px #8b5cf6;
+}
+
+/* 📡 NEXT STEPS (adaptado gamer) */
+#next-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  padding: 2rem 1rem;
+}
+
+/* tarjetas */
+#next-steps > div {
+  flex: 1 1 250px;
+  max-width: 300px;
+
+  padding: 1.5rem;
+  border-radius: 15px;
+
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(139,92,246,0.3);
+
+  box-shadow:
+    0 0 20px rgba(139,92,246,0.2);
+}
+
+/* titulos secciones */
+#next-steps h2 {
+  color: #22d3ee;
+  text-shadow: 0 0 10px #22d3ee;
+}
+
+/* texto */
+#next-steps p {
+  color: #cbd5f5;
+}
+
+/* lista */
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* links */
+#next-steps a {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+
+  text-decoration: none;
+  color: #a78bfa;
+
+  transition: 0.2s;
+}
+
+#next-steps a:hover {
+  background: rgba(139,92,246,0.2);
+  box-shadow: 0 0 10px #8b5cf6;
+}
+
+/* 📏 ESPACER */
+#spacer {
+  height: 60px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 640px) {
+  .app-title {
+    font-size: 2rem;
+  }
+
+  #center {
+    padding: 2rem 1rem;
+  }
+}

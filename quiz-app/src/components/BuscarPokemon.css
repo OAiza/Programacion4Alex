@@ -1,0 +1,183 @@
+/* 🎮 POKEMON — MODO GAMER NEÓN */
+
+.pokemon-container {
+  position: relative;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0, 255, 255, 0.3);
+
+  box-shadow:
+    0 0 20px rgba(0,255,255,0.25),
+    0 0 60px rgba(139,92,246,0.2);
+
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ✨ EFECTO SCAN */
+.pokemon-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,255,255,0.25),
+    transparent
+  );
+
+  animation: scan 5s linear infinite;
+}
+
+/* 🧠 TITULO */
+.pokemon-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  color: #22d3ee;
+
+  text-shadow:
+    0 0 10px #22d3ee,
+    0 0 25px #22d3ee;
+}
+
+/* subtitulo */
+.pokemon-titulo {
+  font-size: 1.2rem;
+  color: #a78bfa;
+
+  text-shadow: 0 0 8px #a78bfa;
+}
+
+/* texto */
+.pokemon-texto {
+  margin: 1rem 0 2rem;
+  color: #cbd5f5;
+}
+
+/* 🔍 BUSQUEDA */
+.pokemon-search {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+/* INPUT */
+.pokemon-input {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(2, 6, 23, 0.8);
+  color: #e2e8f0;
+
+  box-shadow:
+    0 0 10px rgba(0,255,255,0.2),
+    inset 0 0 8px rgba(0,0,0,0.8);
+
+  transition: 0.2s;
+}
+
+.pokemon-input:focus {
+  outline: none;
+
+  box-shadow:
+    0 0 12px #06b6d4,
+    0 0 25px #8b5cf6;
+}
+
+/* BOTON */
+.pokemon-boton {
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  color: #020617;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px #06b6d4,
+    0 0 30px #8b5cf6;
+
+  transition: 0.25s;
+}
+
+.pokemon-boton:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 25px #06b6d4,
+    0 0 50px #8b5cf6;
+}
+
+.pokemon-boton:active {
+  transform: scale(0.95);
+}
+
+/* RESULTADO */
+.pokemon-result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  background: rgba(2, 6, 23, 0.9);
+
+  border: 1px solid rgba(139,92,246,0.3);
+
+  box-shadow:
+    0 0 20px rgba(139,92,246,0.3);
+}
+
+.pokemon-result h3 {
+  color: #22d3ee;
+  text-shadow: 0 0 10px #22d3ee;
+  text-transform: capitalize;
+}
+
+/* IMAGEN */
+.pokemon-image {
+  width: 120px;
+  margin: 1rem 0;
+
+  filter:
+    drop-shadow(0 0 15px #22d3ee)
+    drop-shadow(0 0 30px #8b5cf6);
+}
+
+/* TEXTO RESULTADO */
+.pokemon-result p {
+  color: #cbd5f5;
+}
+
+/* ANIMACION SCAN */
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 640px) {
+  .pokemon-container {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .pokemon-search {
+    flex-direction: column;
+  }
+
+  .pokemon-boton {
+    width: 100%;
+  }
+}
